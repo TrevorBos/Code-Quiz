@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Code Quiz</title>
-</head>
-<body>
-    
-    
-    <!-- Div section for highscores -->
-    
+  </head>
+  <body>
+    <!-- Div section for highscores near the top, will also show the timer -->
+    <div id="controller">
+      <div id="information">
+        <button id="highscores" href="">View High Scores</button>
+        <div id="timer">
+          <p>Time: <span id="time">0</span></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Div section for the main game area will include the title, brief guide, and a start quiz button -->
-    
-    <!-- Div section to hold the buttons for answering questions, will initially be hidden -->
-    
-    <!-- Div section for when the user finishest the game, will show final score, allow for entering initials, and a submit button
-        for saving their highscore. -->
-        
+    <div id="positionWrap">
+      <section id="guide">
+        <h1>Coding Quiz</h1>
+        <p>
+          Can you answer the following code-related question within the time
+          limit? Will you be the next amazing knowledge person? Give it a shot!
+          Hit that start button, but keep in mind, incorrect answers will
+          penalize your score and your time by 10 seconds, so be careful 😈
+        </p>
+        <button>Start Quiz</button>
+      </section>
+      <!-- Section to hold the buttons for answering questions, will initially be hidden -->
+      <section class="hide" id="quizBucket">
+        <p id="title"></p>
+        <!-- Buttons will accept the possible answers from each question -->
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <div class="hidden" id="userScore">
+          <!-- This &nbsp stands for non breaking space and will not break onto a new line -->
+          <p>&nbsp;</p>
+        </div>
+      </section>
+
+      <!-- Section for when the user finishest the game, will show final score, allow for entering initials, and a submit button
+          for saving their highscore. -->
+
+        <section class="hide" id="gameFinish">
+            <h1>You Finished!</h1>
+            <p>You ended the quiz with&nbsp; <span id="highscore"></span></p>
+            <div id="recordScore">
+                <p>Enter your initials: </p>
+                <input type="text" id="initials">
+                <button>Submit</button>
+            </div>
+            <div class="hidden" id="errorIndicator">
+                <p>&nbsp;</p>
+            </div>
+        </section>
         <!-- Div section for highscores, will initially be hidden unless the user prompts to see them. -->
-        <!-- This links the javascript file. -->
-        <script src="./assets/js/script.js"></script>
-        
-</body>
+
+    </div>
+
+
+
+    <!-- This links the javascript file. -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
