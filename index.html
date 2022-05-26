@@ -9,6 +9,7 @@
   </head>
   <body>
     <!-- Div section for highscores near the top, will also show the timer -->
+
     <div id="controller">
       <div id="information">
         <button id="highscores" href="">View High Scores</button>
@@ -19,6 +20,7 @@
     </div>
 
     <!-- Div section for the main game area will include the title, brief guide, and a start quiz button -->
+
     <div id="positionWrap">
       <section id="guide">
         <h1>Coding Quiz</h1>
@@ -30,7 +32,9 @@
         </p>
         <button>Start Quiz</button>
       </section>
+
       <!-- Section to hold the buttons for answering questions, will initially be hidden -->
+
       <section class="hide" id="quizBucket">
         <p id="title"></p>
         <!-- Buttons will accept the possible answers from each question -->
@@ -47,23 +51,29 @@
       <!-- Section for when the user finishest the game, will show final score, allow for entering initials, and a submit button
           for saving their highscore. -->
 
-        <section class="hide" id="gameFinish">
-            <h1>You Finished!</h1>
-            <p>You ended the quiz with&nbsp; <span id="highscore"></span></p>
-            <div id="recordScore">
-                <p>Enter your initials: </p>
-                <input type="text" id="initials">
-                <button>Submit</button>
-            </div>
-            <div class="hidden" id="errorIndicator">
-                <p>&nbsp;</p>
-            </div>
-        </section>
-        <!-- Div section for highscores, will initially be hidden unless the user prompts to see them. -->
+      <section class="hide" id="gameFinish">
+        <h1>You Finished!</h1>
+        <p>You ended the quiz with&nbsp; <span id="highscore"></span></p>
+        <div id="recordScore">
+          <p>Enter your initials:</p>
+          <input type="text" id="initials" />
+          <button>Submit</button>
+        </div>
+        <div class="hidden" id="errorIndicator">
+          <p>&nbsp;</p>
+        </div>
+      </section>
 
+      <!-- Section for highscores, will initially be hidden unless the user prompts to see them. -->
+
+      <section class="hide" id="highScoresList">
+        <h1>High Scores</h1>
+        <!-- Empty div as data will be dynamically added in through JS -->
+        <div></div>
+        <button id="resetGame">Return</button>
+        <button id="clearHighScores">Clear Highscores</button>
+      </section>
     </div>
-
-
 
     <!-- This links the javascript file. -->
     <script src="./assets/js/script.js"></script>
