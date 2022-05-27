@@ -40,6 +40,26 @@ body {
     flex-direction: column;
 }
 
+#highscores {
+    left: 40px;
+    background-color: rgb(26, 167, 26);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: large;
+}
+
+#highscores:hover{
+    background-color: #0a7919;
+}
+
+#timer {
+    right: 40px;
+}
+
+#guide {
+    text-align: center;
+}
+
 /* Positioning of the main quiz section */
 #positionWrap {
     display: flex;
@@ -48,6 +68,13 @@ body {
     /* The calc() CSS function lets you perform calculations when specifying CSS property values. 
     It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed. */
     min-height: calc(100% - 110);
+    border: 3px solid black;
+    padding: 35px;
+    margin: 35px;
+    background-color: grey;
+    border: 3px solid black;
+    box-shadow:5px 5px;
+    border-radius: 15px;
 }
 
 section #guide {
@@ -55,3 +82,75 @@ section #guide {
     margin: 0 auto;
 }
 
+/* Styling for the majority of buttons, will go more in depth with specific buttons*/
+button {
+    background-color:#10b125;
+    color:white;
+    border: none;
+    padding:5px 10px;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: large;
+    border: 2px solid black;
+  }
+
+/* Specifically for the start button */
+#guide button:hover {
+    background-color: #0a7919;
+}
+
+
+/* Quiz box is where the answers will primarily be displayed when the quiz is running */
+#quizBox #title {
+    font-weight: 700;
+}
+
+#quizBox button {
+    background-color:#10b125;
+    border-radius:5px;
+    color:white;
+    margin: 3px 0;
+    padding: 5px 5px ;
+    cursor:pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+#quizBox button:hover {
+    background-color: #0a7919;
+}
+
+/* This is all for the highscore sections, mostly hidden for the most part, unless choses otherwise */
+#userScore, #errorScore {
+    border-top: 1px solid #999;
+    color: #10b125;
+    font-size: 1.3em;
+    margin: 0;
+    font-style: italic;
+    font-weight:700;
+    margin: 10px auto;
+}
+
+#userScore p, #errorScore p {
+    margin: 0;
+    margin-top: 10px;
+}
+
+#recordScore input, #recordScore button {
+    margin-top: 5px;
+}
+
+/* Styling to make things appear hidden until user prompted */
+.hide {
+    display: none;
+}
+
+#hidden {
+    visibility: hidden;
+}
+
+/* To be used in JS */
+.disable {
+    pointer-events: none;
+}
