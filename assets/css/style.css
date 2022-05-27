@@ -1,0 +1,57 @@
+/* Generic page styling */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-color: rgb(17, 99, 146);
+}
+
+/* This is for the dynamically created div's from JS */
+#highScoresList div div {
+    padding: 5px;
+    font-weight: 600;
+}
+
+#highScoresList div div:nth-child(odd){
+    background-color: grey;
+}
+
+#highScoresList button {
+    margin:5px 0;
+}
+
+/* Main header section or controller for the game, will show the time and a view high scores button */
+
+#controller {
+    background-color: grey;
+    border: 3px solid black;
+    box-shadow:5px 5px;
+    border-radius: 15px;
+}
+
+#information {
+    max-width: 980px;
+    color: white;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    padding: 16px 30px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Positioning of the main quiz section */
+#positionWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* The calc() CSS function lets you perform calculations when specifying CSS property values. 
+    It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed. */
+    min-height: calc(100% - 110);
+}
+
+section #guide {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
