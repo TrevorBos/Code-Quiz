@@ -23,6 +23,7 @@ body {
 /* Main header section or controller for the game, will show the time and a view high scores button */
 
 #controller {
+    margin: 35px;
     background-color: grey;
     border: 3px solid black;
     box-shadow:5px 5px;
@@ -69,8 +70,8 @@ body {
     It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed. */
     min-height: calc(100% - 110);
     border: 3px solid black;
-    padding: 35px;
-    margin: 35px;
+    padding: 15px;
+    margin: 35px 300px;
     background-color: grey;
     border: 3px solid black;
     box-shadow:5px 5px;
