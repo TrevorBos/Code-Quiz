@@ -31,7 +31,6 @@ body {
 }
 
 #information {
-    max-width: 980px;
     color: white;
     justify-content: space-between;
     display: flex;
@@ -40,8 +39,15 @@ body {
     align-items: center;
 }
 
+#timer {
+    background-color: #10b125;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
 #highscores {
-    left: 40px;
     background-color: rgb(26, 167, 26);
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -50,10 +56,6 @@ body {
 
 #highscores:hover{
     background-color: #0a7919;
-}
-
-#timer {
-    right: 40px;
 }
 
 #guide {
