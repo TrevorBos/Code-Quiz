@@ -67,16 +67,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* The calc() CSS function lets you perform calculations when specifying CSS property values. 
-    It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed. */
-  min-height: calc(100% - 110);
   border: 3px solid black;
   padding: 15px;
-  margin: 35px 300px;
+  margin: 35px;
   background-color: grey;
   border: 3px solid black;
   box-shadow: 5px 5px;
   border-radius: 15px;
+
 }
 
 section #guide {
@@ -122,6 +120,14 @@ button {
   background-color: #0a7919;
 }
 
+#gameFinish button:hover {
+    background-color: #0a7919;
+}
+
+#quizBox #userScore p {
+    color:black ;
+}
+
 /* This is all for the highscore sections, mostly hidden for the most part, unless choses otherwise */
 #userScore,
 #errorScore {
@@ -138,6 +144,7 @@ button {
 #errorScore p {
   margin: 0;
   margin-top: 10px;
+  color: black;
 }
 
 #recordScore input,
@@ -159,10 +166,16 @@ button {
   pointer-events: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   #positionWrap {
-    min-height: calc(100% - 82px);
+      width: fit-content;
+      margin: auto;
   }
+
+  #quizbox button {
+      margin: 15px;
+  }
+  
   #gameFinish #recordScore {
     display: flex;
     align-items: center;
@@ -170,7 +183,7 @@ button {
 
   #gameFinish #recordScore input,
   #gameFinish #recordScore button {
-    margin-left: 10px;
+    margin: 10px;
   }
 
   #information {
@@ -183,5 +196,9 @@ button {
 
   #quizBox ol {
     min-width: 100%;
+  }
+
+  @media screen and (max-width: 575px) {
+
   }
 }
