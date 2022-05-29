@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', (event) => {
 // Variables and initial setup for local storage / array
 
 // Variables
@@ -12,9 +13,9 @@ var questionAnswers = document.querySelectorAll("#quizBox button");
 // This array will be for the highScore and will be cleared if not needed
 var highScoreArray = [];
 // Retrieve the highscore information if it exists, or keep it blank if it doesnt
-localStorage.getItem("highScoreArray")
-  ? (highScoreArray = JSON.parse(localStorage.getItem("highScoreArray")))
-  : (highScoreArray = []);
+(localStorage.getItem("highScoreArray"))
+  ? highScoreArray = JSON.parse(localStorage.getItem("highScoreArray"))
+  : highScoreArray = [];
 
 //This is where the functions will go
 
@@ -75,34 +76,61 @@ var setQuestionInfo = function () {
 
 // Function for changing the question, and also tell the player whether they got the question right or wrong
 
-var quizUpdater = function(answerCopy) {
-    grabElement('#recordScore p').innerHTML = answerCopy;
-    grabElement('#recordScore').classList.remove('invisible', scoreIndicator());
-    Array.from(questionAnswers).forEach(answer =>
-    {
-        answer.classList.add('disable');
-    });
+var quizUpdater = function (answerCopy) {
+  grabElement("#userScore p").innerHTML = answerCopy;
+  grabElement("#userScore").classList.remove("invisible", scoreIndicator());
+  Array.from(questionAnswers).forEach((answer) => {
+    answer.classList.add("disable");
+  });
 
-    // If all the questions have been answered exist the quiz section
-    setTimeout(() => {
-        if (questionNumber === quizQuestions.length) {
-            onlyDisplaySection("#gameFinish");
-            timer = 0;
-            grabElement('#time').innerHTML = timer;
-        } else {
-            // Updates copy in questions with the net array's question text.
-            setQuestionData();
-            // Removed disabled status.
-            Array.from(questionAnswers).forEach(answer => {
-                answer.classList.remove('disable');
-            });
-        }
-    }, 1000);
-}
+  // If all the questions have been answered exist the quiz section
+  setTimeout(() => {
+    if (questionNumber === quizQuestions.length) {
+      onlyDisplaySection("#gameFinish");
+      timer = 0;
+      grabElement("#time").innerHTML = timer;
+    } else {
+      // Updates copy in questions with the net array"s question text.
+      setQuestionData();
+      // Removed disabled status.
+      Array.from(questionAnswers).forEach((answer) => {
+        answer.classList.remove("disable");
+      });
+    }
+  }, 1000);
+};
 
 // Function for the timer events
 
+var gameTimer = function () {
+  if (timer > 0) {
+    timer = timer - 1;
+    grabElement("#time").innerHTML = timer;
+  } else {
+    clearInterval(gameClock);
+    grabElement("#highScore").innerHTML = playerScore;
+    onlyDisplaySection("#gameFinish");
+  }
+};
+
 // Function to start timer and start giving the questions to the player
+var gameClock;
+grabElement("#guide button").addEventListener("click", (e) => {
+    //call  function to set Initial data in questionbox 
+    setQuestionInfo();
+    unHideSections("#quizBox");
+    gameClock = setInterval(gameTimer, 1000);
+});
+
+var scoreIndicator = function () {
+    clearTimeout(timerSet);
+    timerSet = setTimeout(() => {
+       grabElement("#userScore").classList.add('invisible'); 
+    }, 1000);
+}
+
+})
+
 
 // Function for handling what happens when a correct answer is given, or if its incorrect
 
