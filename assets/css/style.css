@@ -1,158 +1,187 @@
 /* Generic page styling */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    background-color: rgb(17, 99, 146);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: rgb(17, 99, 146);
 }
 
 /* This is for the dynamically created div's from JS */
 #highScoresList div div {
-    padding: 5px;
-    font-weight: 600;
+  padding: 5px;
+  font-weight: 600;
 }
 
-#highScoresList div div:nth-child(odd){
-    background-color: grey;
+#highScoresList div div:nth-child(odd) {
+  background-color: grey;
 }
 
 #highScoresList button {
-    margin:5px 0;
+  margin: 5px 0;
 }
 
 /* Main header section or controller for the game, will show the time and a view high scores button */
 
 #controller {
-    margin: 35px;
-    background-color: grey;
-    border: 3px solid black;
-    box-shadow:5px 5px;
-    border-radius: 15px;
+  margin: 35px;
+  background-color: grey;
+  border: 3px solid black;
+  box-shadow: 5px 5px;
+  border-radius: 15px;
 }
 
 #information {
-    color: white;
-    justify-content: space-between;
-    display: flex;
-    margin: 0 15px;
-    padding: 15px 15px;
-    align-items: center;
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 15px;
+  padding: 15px 15px;
+  align-items: center;
 }
 
 #timer {
-    background-color: #10b125;
-    padding: 5px 10px;
-    border: 2px solid black;
-    border-radius: 15px;
-    font-size: 18px;
+  background-color: #10b125;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 18px;
 }
 
 #highscores {
-    background-color: rgb(26, 167, 26);
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    font-size: large;
+  background-color: rgb(26, 167, 26);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: large;
 }
 
-#highscores:hover{
-    background-color: #0a7919;
+#highscores:hover {
+  background-color: #0a7919;
 }
 
 #guide {
-    text-align: center;
+  text-align: center;
 }
 
 /* Positioning of the main quiz section */
 #positionWrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* The calc() CSS function lets you perform calculations when specifying CSS property values. 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* The calc() CSS function lets you perform calculations when specifying CSS property values. 
     It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed. */
-    min-height: calc(100% - 110);
-    border: 3px solid black;
-    padding: 15px;
-    margin: 35px 300px;
-    background-color: grey;
-    border: 3px solid black;
-    box-shadow:5px 5px;
-    border-radius: 15px;
+  min-height: calc(100% - 110);
+  border: 3px solid black;
+  padding: 15px;
+  margin: 35px 300px;
+  background-color: grey;
+  border: 3px solid black;
+  box-shadow: 5px 5px;
+  border-radius: 15px;
 }
 
 section #guide {
-    max-width: 50%;
-    margin: 0 auto;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 /* Styling for the majority of buttons, will go more in depth with specific buttons*/
 button {
-    background-color:#10b125;
-    color:white;
-    border: none;
-    padding:5px 10px;
-    border-radius: 5px;
-    cursor:pointer;
-    font-size: large;
-    border: 2px solid black;
-  }
+  background-color: #10b125;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  border: 2px solid black;
+}
 
 /* Specifically for the start button */
 #guide button:hover {
-    background-color: #0a7919;
+  background-color: #0a7919;
 }
-
 
 /* Quiz box is where the answers will primarily be displayed when the quiz is running */
 #quizBox #title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 #quizBox button {
-    background-color:#10b125;
-    border-radius:5px;
-    color:white;
-    margin: 3px 0;
-    padding: 5px 5px ;
-    cursor:pointer;
-    display: block;
-    width: 100%;
-    text-align: left;
+  background-color: #10b125;
+  border-radius: 5px;
+  color: white;
+  margin: 3px 0;
+  padding: 5px 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
 #quizBox button:hover {
-    background-color: #0a7919;
+  background-color: #0a7919;
 }
 
 /* This is all for the highscore sections, mostly hidden for the most part, unless choses otherwise */
-#userScore, #errorScore {
-    border-top: 1px solid #999;
-    color: #10b125;
-    font-size: 1.3em;
-    margin: 0;
-    font-style: italic;
-    font-weight:700;
-    margin: 10px auto;
+#userScore,
+#errorScore {
+  border-top: 1px solid #999;
+  color: #10b125;
+  font-size: 1.3em;
+  margin: 0;
+  font-style: italic;
+  font-weight: 700;
+  margin: 10px auto;
 }
 
-#userScore p, #errorScore p {
-    margin: 0;
-    margin-top: 10px;
+#userScore p,
+#errorScore p {
+  margin: 0;
+  margin-top: 10px;
 }
 
-#recordScore input, #recordScore button {
-    margin-top: 5px;
+#recordScore input,
+#recordScore button {
+  margin-top: 5px;
 }
 
 /* Styling to make things appear hidden until user prompted */
 .hide {
-    display: none;
+  display: none;
 }
 
 #hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /* To be used in JS */
 .disable {
-    pointer-events: none;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #positionWrap {
+    min-height: calc(100% - 82px);
+  }
+  #gameFinish #recordScore {
+    display: flex;
+    align-items: center;
+  }
+
+  #gameFinish #recordScore input,
+  #gameFinish #recordScore button {
+    margin-left: 10px;
+  }
+
+  #information {
+    flex-direction: row;
+  }
+
+  #quizBox {
+    min-width: 420px;
+  }
+
+  #quizBox ol {
+    min-width: 100%;
+  }
 }
