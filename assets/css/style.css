@@ -77,6 +77,10 @@ body {
 
 }
 
+#highScoresList button:hover {
+  background-color: #0a7919;
+}
+
 section #guide {
   max-width: 50%;
   margin: 0 auto;
